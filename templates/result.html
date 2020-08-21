@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	</head>
+		<body>
+
+			<header>
+				<div class="container">
+					<div id="brandname">
+						ML App
+					</div>
+					<h2>Energy efficiency detector</h2>
+
+				</div>
+			</header>
+			<p style="color:blue;font-size:20;text-align: left;"><b>Result</b></p>
+			<div class="results">
+
+
+
+				{% if prediction <= 50 %}
+				<h2 style="color:red;">The relative eficiency is low with a value of {{prediction}} percentage</h2>
+				{% elif prediction > 50 and prediction < 80 %}
+				<h2 style="color:blue;">The relative eficiency is moderate with a value of {{prediction}} percentage</h2>
+                {% else %}
+                <h2 style="color:green;">The relative eficiency is high with a value of {{prediction}} percentage</h2>
+				{% endif %}
+
+			</div>
+
+		</body>
+</html>

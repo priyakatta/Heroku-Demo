@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is puppy page</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<h1>This page is for puppy: {{name}}</h1>
+<a href="{{url_for('static',filename = 'puppy.jpg')}}"> here </a>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>lets check your credentials</h1>
+    {% if val %}
+    <p>your username passed three requirements!</p>
+    {% else %}
+    <p>your User Name is incorrect</p>
+    {% endif %}
+</div>
+{%endblock%}
